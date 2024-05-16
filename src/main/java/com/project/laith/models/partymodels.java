@@ -23,7 +23,7 @@ public class partymodels {
 
     private Integer id_party;
     @Column(
-            name = "name"
+            name = "nam"
     )
     private  String name;
     @Column(name = "price")

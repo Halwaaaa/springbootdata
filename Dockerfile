@@ -1,6 +1,4 @@
-FROM openjdk:20
-
-RUN apt-get update && apt-get install -y maven
+FROM maven:3.8.6-openjdk-20 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 

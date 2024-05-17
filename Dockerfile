@@ -1,4 +1,5 @@
-FROM maven:3.9.6-openjdk-17 AS build
+FROM openjdk:17
+RUN apt-get update && apt-get install -y maven
 COPY . .
 RUN mvn clean package -DskipTests
 

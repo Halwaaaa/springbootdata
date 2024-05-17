@@ -1,4 +1,6 @@
-FROM maven:3-openjdk-17 AS build
+FROM openjdk:20
+
+RUN apt-get update && apt-get install -y maven
 COPY . .
 RUN mvn clean package -DskipTests
 
